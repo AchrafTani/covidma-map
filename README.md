@@ -20,6 +20,9 @@
 # Preview MAP : 
    https://covid19-livemap.netlify.com/
    
+# I hope you support me about the COVID19 Morocco website , Read the article :
+   https://www.facebook.com/achraf.tani/posts/3287642234597222
+   
 # I used : 
   - Mr. Idder Hamouch COVIDMA JSON FILE : https://github.com/iddify
   - JAVASCRIPT .. Request ajax
