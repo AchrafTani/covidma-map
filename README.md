@@ -15,6 +15,7 @@
    - Download the file project or clone (Git).
    - You need to get a key from maptiler to use their maps from the link :
    https://cloud.maptiler.com/maps
+   After that , You must change the the key in line 4 (index.html)
    
 # Preview MAP : 
    https://covid19-livemap.netlify.com/
