@@ -16,7 +16,7 @@
    
 # I used : 
   - Mr. Idder Hamouch COVIDMA JSON FILE : https://github.com/iddify
-  - JAVASCRIPT (JQUERY)
+  - JAVASCRIPT .. Request ajax
   - Bootstrap
   - Maptiler
 
