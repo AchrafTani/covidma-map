@@ -11,6 +11,9 @@
 # Screenshot :
 ![screenshot](screenshot.png)
 
+# How can i use the map :
+   Download the file project or clone (Git) and u can make everythings with it.
+   
 # Preview MAP : 
    https://covid19-livemap.netlify.com/
    
@@ -21,3 +24,4 @@
   - Maptiler
 
 
+free for personal use only, Thanks.
