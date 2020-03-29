@@ -1,7 +1,7 @@
 # COVIDMA-map
 💥 Moroccan data about COVID19/ Live MAP 2020
 
-# How can i use the map :
+# Map features :
    - The diameter of the circle changes dynamically, depending on the cases in each region.
    - This map enables you to know the details of each circle where Corona is located by clicking the mouse.
    - Zoom is automatically turned on, depending on the boundaries of the circles in the map.
