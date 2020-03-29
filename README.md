@@ -12,7 +12,9 @@
 ![screenshot](screenshot.png)
 
 # How can i use the map :
-   Download the file project or clone (Git) and u can make everythings with it.
+   - Download the file project or clone (Git).
+   - You need to get a key from maptiler to use their maps from the link :
+   https://cloud.maptiler.com/maps
    
 # Preview MAP : 
    https://covid19-livemap.netlify.com/
