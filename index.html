@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/main.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"></script>
+    <script
+			  src="https://code.jquery.com/jquery-3.4.1.min.js"
+			  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+              crossorigin="anonymous">
+       </script>
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
+
+
+    <title>MAP</title>
+</head>
+<body>
+    <div class="container">
+    <center><h2>Live Map Covid-19 :</h2><br></center>
+
+        <div class="row">
+        <div class="col-xl-8 col-lg-8 col-md-12 col-12">
+              <div id="map"></div>
+            </div>
+            <div class="col-xl-4 col-lg-4 col-md-12 col-12">
+                <table class="table table-dark" id="taable">
+                        <thead>
+                            <tr>
+                            <th scope="col">Region</th>
+                            <th scope="col">Cases</th>
+                            <th scope="col">Latitude</th>
+                            <th scope="col">Longitude</th>
+                            </tr>
+                        </thead>
+                </table>
+            </div>
+
+        </div>
+
+    </div>
+    <script src="js/script19.js"></script>
+</body>
+</html>
