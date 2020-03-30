@@ -76,7 +76,7 @@ $(document).ready(function(){
                     }).addTo(map);
                 }
                 if(val.cases != 0){
-                    circle.bindPopup("La région: <b>"+val.region+"</b> contient: <b>"+val.cases+" cases.</b>");
+                    circle.bindPopup("La région: <b>"+val.region+"</b> contient: <b>"+val.cases+" cas.</b>");
                     taab.push(circle);
                 }
         });
