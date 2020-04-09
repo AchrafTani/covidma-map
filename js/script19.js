@@ -18,7 +18,21 @@ $(document).ready(function(){
                 tab += '<td>'+val.latitude+'</td>';
                 tab += '<td>'+val.longitude+'</td>';
                 tab += '</tr></tbody>';
-
+            
+                var valradius = 5000;
+                for(var i=5;i<= 1000;i+=5){
+                    valradius+=1000;
+                    if(val.cases<=i && val.cases>i-5){
+                        var circle = L.circle([val.latitude,val.longitude], {
+                            color: 'red',
+                            fillColor: '#f03',
+                            fillOpacity: 0.5,
+                            radius: valradius
+                            }).addTo(map);
+                    }
+                }
+                /*
+                Méthode dépasse (Statique)
                 if(val.cases<10 && val.cases != 0){
                     var circle = L.circle([val.latitude,val.longitude], {
                     color: 'red',
@@ -74,7 +88,7 @@ $(document).ready(function(){
                     fillOpacity: 0.5,
                     radius: 80000
                     }).addTo(map);
-                }
+                }*/
                 if(val.cases != 0){
                     circle.bindPopup("La région: <b>"+val.region+"</b> contient: <b>"+val.cases+" cas.</b>");
                     taab.push(circle);
