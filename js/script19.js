@@ -19,9 +19,9 @@ $(document).ready(function(){
                 tab += '<td>'+val.longitude+'</td>';
                 tab += '</tr></tbody>';
             
-                var valradius = 5000;
-                for(var i=5;i<= 1000;i+=5){
-                    valradius+=1000;
+                var valradius = 0;
+                for(var i=5;i<= 2000;i+=5){
+                    valradius+=500;
                     if(val.cases<=i && val.cases>i-5){
                         var circle = L.circle([val.latitude,val.longitude], {
                             color: 'red',
