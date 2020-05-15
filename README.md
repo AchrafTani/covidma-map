@@ -18,7 +18,7 @@
    After that , You must change the the key in line 4 (index.html)
    
 # Preview MAP : 
-   https://coronamaroc-map.netlify.com/
+   https://coronamaroc-online-map.netlify.app
    
 # I hope you support me about the COVID19 Moroccan-website , Read the article :
    https://www.facebook.com/achraf.tani/posts/3287642234597222
