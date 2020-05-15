@@ -11,18 +11,22 @@ $(document).ready(function(){
         var tab = '';
         x= data[1];
         $.each(x,function(key,val){
+                cases = val.cases;
+                casesNew = cases.replace(",",".");
 
                 tab += '<tbody><tr>';
-                tab += '<td>'+val.region+'</td>';
-                tab += '<td>'+val.cases+'</td>';
-                tab += '<td>'+val.latitude+'</td>';
-                tab += '<td>'+val.longitude+'</td>';
+                tab += '<td>'+val.region+'%</td>';
+                tab += '<td>'+casesNew+'%</td>';
+                tab += '<td>'+val.latitude+'%</td>';
+                tab += '<td>'+val.longitude+'%</td>';
                 tab += '</tr></tbody>';
-            
+
+                    
+ 
                 var valradius = 0;
-                for(var i=5;i<= 2000;i+=5){
-                    valradius+=500;
-                    if(val.cases<=i && val.cases>i-5){
+                for(var i=1;i<= 100;i+=1){
+                    valradius+=3000;
+                    if(casesNew<=i && casesNew>i-1){
                         var circle = L.circle([val.latitude,val.longitude], {
                             color: 'red',
                             fillColor: '#f03',
@@ -31,68 +35,12 @@ $(document).ready(function(){
                             }).addTo(map);
                     }
                 }
-                /*
-                Méthode dépasse (Statique)
-                if(val.cases<10 && val.cases != 0){
-                    var circle = L.circle([val.latitude,val.longitude], {
-                    color: 'red',
-                    fillColor: '#f03',
-                    fillOpacity: 0.5,
-                    radius: 10000
-                    }).addTo(map);
-                }
-                if(val.cases<=30 && val.cases>10){
-                    var circle = L.circle([val.latitude,val.longitude], {
-                    color: 'red',
-                    fillColor: '#f03',
-                    fillOpacity: 0.5,
-                    radius: 20000
-                    }).addTo(map);
-                }
-                if(val.cases<=60 && val.cases>30){
-                    var circle = L.circle([val.latitude,val.longitude], {
-                    color: 'red',
-                    fillColor: '#f03',
-                    fillOpacity: 0.5,
-                    radius: 30000
-                    }).addTo(map);
-                }
-                if(val.cases<=90 && val.cases>60){
-                    var circle = L.circle([val.latitude,val.longitude], {
-                    color: 'red',
-                    fillColor: '#f03',
-                    fillOpacity: 0.5,
-                    radius: 40000
-                    }).addTo(map);
-                }
-                if(val.cases<=120 && val.cases>90){
-                    var circle = L.circle([val.latitude,val.longitude], {
-                    color: 'red',
-                    fillColor: '#f03',
-                    fillOpacity: 0.5,
-                    radius: 50000
-                    }).addTo(map);
-                }
-                if(val.cases<=150 && val.cases>120){
-                    var circle = L.circle([val.latitude,val.longitude], {
-                    color: 'red',
-                    fillColor: '#f03',
-                    fillOpacity: 0.5,
-                    radius: 60000
-                    }).addTo(map);
-                }
-                if(val.cases>150){
-                    var circle = L.circle([val.latitude,val.longitude], {
-                    color: 'red',
-                    fillColor: '#f03',
-                    fillOpacity: 0.5,
-                    radius: 80000
-                    }).addTo(map);
-                }*/
-                if(val.cases != 0){
-                    circle.bindPopup("La région: <b>"+val.region+"</b> contient: <b>"+val.cases+" cas.</b>");
+                
+                if(casesNew != 0){
+                    circle.bindPopup("La région: <b>"+val.region+"</b> contient: <b>"+casesNew+"% cases.</b>");
                     taab.push(circle);
                 }
+               
         });
       $('#taable').append(tab);
      var group = new L.featureGroup(taab);
